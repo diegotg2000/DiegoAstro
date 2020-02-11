@@ -36,22 +36,24 @@ for i in range(len(NOMBRES)):
     
     x,y=np.unique(apariciones, return_counts=True)
     
-    R=y/sum(y)
+    R=y
     
     if i <=8:
         puntos=np.loadtxt('random.dat',usecols=0)
         total=len(puntos)
         nonzero=len(nodos)
-        p0=np.array([(total-nonzero)/total])
+        p0=np.array([(total-nonzero)])
         P=np.concatenate((p0,R),axis=0)
+        P=P/total
         Srandom[i]=entropia(P)
         Crandom[i]=complejidad(P)
     else:
         puntos=np.loadtxt('norandom.dat',usecols=0)
         total=len(puntos)
         nonzero=len(nodos)
-        p0=np.array([(total-nonzero)/total])
+        p0=np.array([(total-nonzero)])
         P=np.concatenate((p0,R),axis=0)
+        P=P/total
         Snorandom[i-9]=entropia(P)
         Cnorandom[i-9]=complejidad(P)    
     
