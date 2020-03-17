@@ -79,7 +79,7 @@ for j in range(20):
     
 plt.xlabel('\u03b2')
 plt.ylabel('C')
-plt.savefig('CvBeta_varianza2.png')
+plt.savefig('CvBeta_varianza2.pdf')
 
 
     

@@ -134,12 +134,12 @@ for i in range(len(BETAS)):
 
 
 plt.figure(figsize=(5,4))
-plt.errorbar(BETAS, ComSphere, SigmaSphere,label='Esferas')
-plt.errorbar(BETAS, ComShell, SigmaShell,label='Cascarones')
+plt.errorbar(BETAS, ComSphere, SigmaSphere,label='Spheres')
+plt.errorbar(BETAS, ComShell, SigmaShell,label='Shells')
 plt.xlabel('\u03b2')
 plt.ylabel('C')
 plt.legend()
-plt.savefig('CvBeta_geometria.png')
+plt.savefig('CvBeta_geometria.pdf')
 
 
     
